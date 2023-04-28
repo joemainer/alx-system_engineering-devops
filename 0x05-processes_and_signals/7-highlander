@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#This script displays
+#to infinity and beyond indefinitely
+# with a sleep 2 in between each iteration
+# I am invisible!!! when receiving a SIGTEM signal
+
+trap 'echo "Ia m invisible!!!"; l5
+while true; do
+	echo "to infinity an dbeyond"
+	sleep 2
+done
+
