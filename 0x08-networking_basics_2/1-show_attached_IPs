@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Get the IP addresses
+ips=$(ifconfig | grep "inet " | awk '{print $2}')
+
+# Loop through the IP addresses and display the IPv4 addresses only
+for ip in $ips
+do
+    if [[ $ip =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+        echo $ip
+    fi
+done
